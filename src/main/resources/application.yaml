@@ -1,0 +1,25 @@
+server:
+    port: 8089
+
+spring:
+    application:
+        name: customer-service
+    datasource:
+        url: jdbc:mysql://localhost:3306/db_customer
+        username : "root"
+        password : 
+        driver-class-name : com.mysql.jdbc.Driver
+        hikari:
+            minimumIdle: 2
+            maximumPoolSize: 5
+            cachePrepStmts: true
+            prepStmCacheSize: 250
+            prepStmtCacheSqlLimit: 2048
+            useServerPrepStmts: true
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
